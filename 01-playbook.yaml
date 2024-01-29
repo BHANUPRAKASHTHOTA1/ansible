@@ -1,5 +1,6 @@
 - name: pinging the node
   hosts: mongodb
+  become: yes
 
   tasks:
   - name: ping the sever
