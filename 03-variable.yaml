@@ -1,6 +1,6 @@
 - name: variable in ansible
   hosts: node
-  var:
+  vars:
     COURSE: DevOps with AWS
     TRAINER: Sivakumar
     DURATION: 110HRS
