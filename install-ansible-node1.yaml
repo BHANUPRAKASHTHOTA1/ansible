@@ -1,0 +1,9 @@
+-   name: install ansible
+    hosts: node
+    become: yes
+    tasks:
+    -   name: install ansible
+        ansible.builtin.yum:
+            name: ansible 
+            state: installed
+            
