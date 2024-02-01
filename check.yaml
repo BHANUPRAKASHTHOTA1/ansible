@@ -9,7 +9,7 @@
     register: out #output is variable name
     ignore_errors: true
 
-  - when: user != bhanu
+  - when: out.rc != 0
     name: create the user
     become: yes # we need sudo access for this task only
     ansible.builtin.user:
