@@ -1,2 +1,7 @@
 [node]
 172.31.80.62
+
+[node:vars]
+NODE_USERNAME=nodeadmin
+NODE_DB=categories
+NAME=bhanunaidu

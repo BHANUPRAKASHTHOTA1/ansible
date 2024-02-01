@@ -1,0 +1,6 @@
+- name: vars from inventory
+  hosts: node
+  tasks:
+  - name: print the vars from inventory
+    ansible.builtin.debug:
+      msg: "username: {{NODE_USERNAME}}, name: {{NAME}}"
