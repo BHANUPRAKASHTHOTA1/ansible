@@ -1,0 +1,16 @@
+- name: validate user
+  hosts: localhost
+  vars:
+    user: bhanu
+
+  tasks:
+  - name: check the user bhanu if not exists
+    ansible.builtin.command: id bhanu
+    register: out #output is variable name
+    ignore_errors: true
+
+  - when: user != bhanu
+    name: create the user
+    become: yes # we need sudo access for this task only
+    ansible.builtin.user:
+      name: {{user}}
