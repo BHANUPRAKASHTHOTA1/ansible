@@ -8,10 +8,10 @@
      path: /home/centos
     register: bhanunaidu
 
-  - name: "echo if directory already existed"
-    debug:
-      msg: "the bhanunaidu directory is already existed"
-    when: bhanunaidu.stat.exists
+  # - name: "echo if directory already existed"
+  #   debug:
+  #     msg: "the bhanunaidu directory is already existed"
+  #   when: bhanunaidu.stat.exists
 
   - name: "Ansible Create directory if not exists"
     become: yes
