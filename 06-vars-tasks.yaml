@@ -1,0 +1,16 @@
+- name: variables at task level
+  hosts: localhost
+  vars:
+  - MONEY: "10000RS"
+    LAND: "100 Hectares"
+  tasks:
+  - name: Inherit from the parent level
+    ansible.builtin.debug:
+      msg: "MONEY: {{MONEY}}, LAND: {{LAND}}" 
+
+  - name: Inherit from tha parent and add and override
+    vars:
+    - MONEY: "200000RS"
+      HOUSES: "3 houses"
+    ansible.builtin.debug:
+      msg: "money: {{MONEY}}, LAND: {{LAND}}, HOUSES: {{HOUSES}}"
